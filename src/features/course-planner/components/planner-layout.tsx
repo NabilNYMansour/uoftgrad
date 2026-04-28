@@ -47,6 +47,21 @@ export function PlannerLayout({ children }: PlannerLayoutProps) {
               </svg>
             </a>
             <a
+              href="https://nabilmansour.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Developer"
+              className="inline-flex size-8 items-center justify-center gap-1.5 rounded-md border border-border bg-card text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-muted/80 sm:size-auto sm:px-3 sm:py-1.5"
+            >
+              <img
+                src="/fractal.png"
+                alt=""
+                className="size-4 shrink-0 object-cover rounded-full"
+                aria-hidden
+              />
+              <span className="hidden sm:inline">Developer</span>
+            </a>
+            <a
               href="https://web.cs.toronto.edu/graduate/course-descriptions"
               target="_blank"
               rel="noreferrer"

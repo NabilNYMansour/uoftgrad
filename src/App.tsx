@@ -2,7 +2,6 @@ import { useMemo } from "react"
 
 import { DegreeProgressPanel } from "@/features/course-planner/components/degree-progress-panel"
 import { HeroSection } from "@/features/course-planner/components/hero-section"
-import { PlannerFooter } from "@/features/course-planner/components/planner-footer"
 import { PlannerLayout } from "@/features/course-planner/components/planner-layout"
 import { RemainingCoursesSection } from "@/features/course-planner/components/remaining-courses-section"
 import { SelectedCoursesPanel } from "@/features/course-planner/components/selected-courses-panel"
@@ -126,8 +125,6 @@ function App() {
         onResetFilters={resetFilters}
         onToggleCourse={toggleCourse}
       />
-
-      <PlannerFooter />
     </PlannerLayout>
   )
 }
