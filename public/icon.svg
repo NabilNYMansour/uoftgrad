@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="UofTGrad">
+  <rect width="64" height="64" rx="14" fill="#1f1c3d" />
+  <path
+    d="M16 21.5 32 14l16 7.5L32 29 16 21.5Z"
+    fill="#eaeefc"
+  />
+  <path
+    d="M22 27v9.5c0 3.6 4.4 6.5 10 6.5s10-2.9 10-6.5V27l-10 4.7L22 27Z"
+    fill="#eaeefc"
+  />
+  <path d="M47 24v13" stroke="#eaeefc" stroke-width="4" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,17 @@
+{
+  "name": "UofTGrad Course Planner",
+  "short_name": "UofTGrad",
+  "description": "Plan University of Toronto Computer Science graduate courses by program, concentration, breadth group, category, and tag.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fcff",
+  "theme_color": "#1f1c3d",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
