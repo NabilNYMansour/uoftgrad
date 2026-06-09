@@ -11,6 +11,10 @@ import {
 } from "@/features/course-planner/constants"
 import { filterCourses } from "@/features/course-planner/filtering"
 import { getProgress } from "@/features/course-planner/progress"
+import {
+  getConflictingCourseIds,
+  getScheduleConflicts,
+} from "@/features/course-planner/scheduleConflicts"
 import type { Filters, ProgramId } from "@/features/course-planner/types"
 import { COURSES } from "@/data/courses"
 import { useStoredState } from "@/hooks/useStoredState"
@@ -71,6 +75,14 @@ function App() {
     [selectedIdSet]
   )
   const progress = getProgress(programId, selectedCourses)
+  const scheduleConflicts = useMemo(
+    () => getScheduleConflicts(selectedCourses),
+    [selectedCourses]
+  )
+  const conflictingCourseIds = useMemo(
+    () => getConflictingCourseIds(scheduleConflicts),
+    [scheduleConflicts]
+  )
   const normalizedFilters = useMemo(() => normalizeFilters(filters), [filters])
 
   const filteredCourses = useMemo(
@@ -113,6 +125,8 @@ function App() {
           programId={programId}
           selectedCourses={selectedCourses}
           selectedIdsCount={selectedIds.length}
+          conflicts={scheduleConflicts}
+          conflictingCourseIds={conflictingCourseIds}
           onClearSelection={() => setSelectedIds([])}
           onToggleCourse={toggleCourse}
         />
