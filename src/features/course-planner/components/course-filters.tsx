@@ -4,7 +4,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { CATEGORIES, GROUP_DETAILS, TAGS } from "@/data/courses"
+import {
+  CATEGORIES,
+  COURSE_SESSIONS,
+  GROUP_DETAILS,
+  TAGS,
+  type CourseSession,
+} from "@/data/courses"
 
 import type { Filters } from "../types"
 import { FilterSelect } from "./filter-select"
@@ -52,14 +58,25 @@ export function CourseFilters({
               filters.query === "" &&
               filters.groups.length === 0 &&
               filters.categories.length === 0 &&
-              filters.tags.length === 0
+              filters.tags.length === 0 &&
+              filters.sessions.length === 0
             }
           >
             Clear all
           </Button>
         </div>
 
-        <div className="grid items-end gap-4 md:grid-cols-3">
+        <div className="grid items-end gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <FilterSelect
+            id="sessions"
+            label="Session"
+            allLabel="All sessions"
+            value={filters.sessions}
+            options={COURSE_SESSIONS}
+            onChange={(value) =>
+              onUpdateFilter("sessions", value as CourseSession[])
+            }
+          />
           <FilterSelect
             id="groups"
             label="Group"

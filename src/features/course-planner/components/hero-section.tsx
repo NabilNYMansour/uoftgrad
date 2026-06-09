@@ -5,8 +5,8 @@ export function HeroSection() {
         Graduate course planner
       </h1>
       <p className="max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-        Search the 2025-2026 CS graduate course descriptions, filter by tag or
-        category, and save your degree plan locally.
+        Search the 2026-2027 CS graduate course descriptions, filter by
+        session, tag, or category, and save your degree plan locally.
       </p>
     </section>
   )

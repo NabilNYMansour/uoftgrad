@@ -19,7 +19,17 @@ export function filterCourses(courses: Course[], filters: Filters): Course[] {
     const matchesTag =
       filters.tags.length === 0 ||
       filters.tags.some((tag) => course.tags.includes(tag))
+    const matchesSession =
+      filters.sessions.length === 0 ||
+      !course.sessions?.length ||
+      filters.sessions.some((session) => course.sessions?.includes(session))
 
-    return matchesQuery && matchesGroup && matchesCategory && matchesTag
+    return (
+      matchesQuery &&
+      matchesGroup &&
+      matchesCategory &&
+      matchesTag &&
+      matchesSession
+    )
   })
 }

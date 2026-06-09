@@ -32,6 +32,7 @@ function normalizeFilters(filters: Filters): Filters {
     group?: unknown
     category?: unknown
     tag?: unknown
+    session?: unknown
   }
 
   return {
@@ -41,6 +42,12 @@ function normalizeFilters(filters: Filters): Filters {
       storedFilters.categories ?? storedFilters.category
     ),
     tags: getStoredFilterList(storedFilters.tags ?? storedFilters.tag),
+    sessions: getStoredFilterList(
+      storedFilters.sessions ?? storedFilters.session
+    ).filter(
+      (session): session is Filters["sessions"][number] =>
+        session === "Fall" || session === "Winter" || session === "Summer"
+    ),
   }
 }
 

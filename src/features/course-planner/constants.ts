@@ -69,6 +69,7 @@ export const INITIAL_FILTERS: Filters = {
   groups: [],
   categories: [],
   tags: [],
+  sessions: [],
 }
 
 export const PROGRAM_EXTERNAL_NOTES: Partial<Record<ProgramId, string>> = {

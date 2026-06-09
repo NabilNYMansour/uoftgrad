@@ -62,6 +62,11 @@ export function RemainingCoursesSection({
                   <div className="min-w-0 space-y-2">
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge variant="secondary">{course.code}</Badge>
+                      {course.sessions?.map((session) => (
+                        <Badge key={session} variant="outline">
+                          {session}
+                        </Badge>
+                      ))}
                       <Badge variant="outline">{course.group}</Badge>
                       <Badge variant="outline">{course.category}</Badge>
                     </div>

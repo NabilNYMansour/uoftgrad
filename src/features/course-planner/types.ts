@@ -1,3 +1,5 @@
+import type { CourseSession } from "@/data/courses"
+
 export type ProgramId =
   | "msc"
   | "phd"
@@ -15,6 +17,7 @@ export type Filters = {
   groups: string[]
   categories: string[]
   tags: string[]
+  sessions: CourseSession[]
 }
 
 export type Program = {
